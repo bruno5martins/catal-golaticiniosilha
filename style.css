@@ -17,11 +17,7 @@
 
 body {
   max-width: 1800px;
-  background-image: linear-gradient(
-    45deg,
-    rgb(249, 208, 133),
-    rgb(247, 157, 79)
-  );
+  background-color: #948d82;
 }
 
 @media screen and (max-width: 480px) {
@@ -31,7 +27,6 @@ body {
     flex-direction: column;
     padding-top: 30px;
   }
-
 
   .rede-sociais li {
     display: flex;
@@ -50,18 +45,13 @@ body {
     display: flex;
   }
 
-
-
   .maps {
     transform: translateY(-12px);
   }
 
-  .header-main-img .header-img-nome img{
-        width: 130px;
+  .header-main-img .header-img-nome img {
+    width: 130px;
   }
-
-  
-  
 }
 
 .header-logo {
@@ -87,7 +77,6 @@ body {
 
 .img-logo img {
   width: 230px;
-
 }
 
 .tela-carregamento {
@@ -104,7 +93,7 @@ body {
   justify-content: center;
   background-image: linear-gradient(45deg, rgb(249, 152, 55), rgb(244, 56, 56));
   animation-duration: 5s;
-  transform: translateY(-1000px);
+  transform: translateY(-5000px);
 }
 
 .tela-carregamento p {
@@ -120,7 +109,7 @@ body {
 }
 
 /* tela loading */
-/* 
+
 @keyframes carregamento {
   1% {
     transform: translateY(0px);
@@ -133,7 +122,7 @@ body {
   100% {
     transform: translateY(-1000px);
   }
-} */
+}
 
 .rede-sociais ul li {
   display: flex;
@@ -160,11 +149,6 @@ body {
 
 /* ofertas */
 
-
-
-
-
-
 main {
   display: flex;
   flex-direction: column;
@@ -172,14 +156,13 @@ main {
   margin: 0 10px;
 }
 
-.header-img-nome{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+.header-img-nome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-
 
 .header-img-nome img {
   width: 100%;
@@ -197,11 +180,12 @@ main {
   border-radius: 20px;
   display: flex;
   width: 180px;
+  height: 200px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 0 10px;
-  background-image: linear-gradient(45deg, #c0754d, #B6410f);
+  background-image: linear-gradient(45deg, rgb(233, 118, 3), red);
   z-index: 1;
   box-shadow: -2px 2px 0 3px rgb(8, 135, 239);
   transition-duration: 0.3s;
@@ -209,7 +193,7 @@ main {
 
 .header-main-produtos {
   display: flex;
- flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 40px 10px;
   justify-content: center;
   align-items: center;
@@ -233,19 +217,78 @@ main {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  width: 100%;
 }
 
 .preco p {
   color: white;
   padding: 10px;
-  background-image: linear-gradient(45deg, red, orange);
+  background-color: rgb(8, 135, 239);
   border: 1px white solid;
   border-radius: 1px 1px 1px 10px;
   font-size: 30px;
   letter-spacing: 2px;
-
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 900;
   cursor: pointer;
   transition-duration: 0.3s;
 }
+
+.preco-sem-estoque p {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: white;
+  border: 1px white solid;
+  border-radius: 1px 1px 1px 10px;
+  font-size: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.preco-sem-estoque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.preco-oferta p {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  background-color: red;
+  border: 1px white solid;
+  border-radius: 1px 1px 1px 10px;
+  font-size: 30px;
+  height: 60px;
+  display: flex;
+  letter-spacing: 2px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  width: 100%;
+}
+
+.preco-oferta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+      }
+
+
