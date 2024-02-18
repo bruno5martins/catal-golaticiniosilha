@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Permanent+Marker&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Permanent+Marker&display=swap");
 
-body {
-  background-color: white;
+::-webkit-scrollbar {
+  display: none;
 }
 
 * {
@@ -16,8 +16,12 @@ body {
 }
 
 body {
-  max-width: 1600px;
-  background-color: rgb(148, 138, 107);
+  max-width: 1800px;
+  background-image: linear-gradient(
+    45deg,
+    rgb(249, 208, 133),
+    rgb(247, 157, 79)
+  );
 }
 
 @media screen and (max-width: 767px) {
@@ -78,6 +82,54 @@ body {
   scale: 1.6;
 }
 
+.tela-carregamento {
+  animation-name: carregamento;
+  position: absolute;
+  z-index: 100;
+  max-width: 1800px;
+  max-height: 1880px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(45deg, rgb(249, 152, 55), rgb(244, 56, 56));
+  animation-duration: 5s;
+  transform: translateY(-1000px);
+}
+
+.tela-carregamento p {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 900;
+  text-shadow: 0 0 10px white;
+}
+
+.tela-carregamento img {
+  width: 280px;
+}
+
+
+
+/* tela loading */
+
+
+/* @keyframes carregamento {
+  1% {
+    transform: translateY(0px);
+  }
+
+  70% {
+    transform: translateY(-0px);
+  }
+
+  100% {
+    transform: translateY(-1000px);
+  }
+} */
+
 .rede-sociais ul li {
   display: flex;
 }
@@ -104,22 +156,69 @@ body {
 /* ofertas */
 
 .header-oferta {
-  background-image: linear-gradient(45deg, rgb(233, 118, 3), red);
-  width: 70%;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  box-shadow: 1px 2px 6px 1px black, -1px 12px 0px 7px rgb(8, 135, 239);
-  border-radius: 0 10px 90px 0;
+  max-width: 100%;
   margin-bottom: 50px;
 }
 
 .oferta {
-  color: white;
+  color: rgb(0, 0, 0);
   letter-spacing: 5px;
   font-weight: 700;
   text-align: center;
-  font-size: 40px;
+  margin: 0 20px;
+  font-size: 60px;
+  text-shadow: -2px 2px 0px rgb(255, 255, 255);
+  border-radius: 10px 10px 10px 70px;
+  background-color: rgb(255, 31, 31);
+  box-shadow: inset -20px 10px 40px -10px rgb(255, 0, 0),
+    -2px 5px 4px -5px black, -8px 10px 0 2px white;
+  padding: 20px;
+  /* border: 1px solid black; */
+}
+
+.selo-marca {
+  position: absolute;
+  text-align: center;
+  height: 200px;
+  width: 153px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  transform: translateY(8px);
+  
+}
+
+.selo-marca p {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  background-color: red;
+  padding: 2px;
+  border-radius: 6px;
+  border: 2px solid black;
+
+}
+
+.selo-sem-estoque{
+        position: absolute;
+        text-align: center;
+        height: 200px;
+        width: 153px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        transform: translateY(8px);
+}
+
+.selo-sem-estoque p{
+        color: rgb(0, 0, 0);
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 900;
+        background-color: rgb(255, 255, 255);
+        padding: 2px;
+        border-radius: 6px;
+        border: 2px solid black;
+
 }
 
 main {
@@ -135,13 +234,13 @@ main {
   transform: translateY(-10px);
 }
 
-.header-main-img h2{
-        color: black;
-        max-width: 100%;
+.header-main-img h2 {
+  color: black;
+  max-width: 100%;
 }
 
 .produto {
-  width: 160px;
+  width: 170px;
   border-radius: 20px;
   display: grid;
   flex-direction: column;
@@ -150,71 +249,50 @@ main {
   background-image: linear-gradient(45deg, rgb(233, 118, 3), red);
   /* border: 4px black solid; */
   z-index: 1;
-  box-shadow: -2px 2px 0 3px rgb(8, 135, 239)   ;
+  box-shadow: -2px 2px 0 3px rgb(8, 135, 239);
   transition-duration: 0.3s;
 }
-
-
 
 .header-main-produtos {
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 30px 10px;
+  grid-gap: 40px 10px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-main-img {
   display: flex;
 }
 
-.selo-marca {
-  position: absolute;
-  width: 166px;
-  display: flex;
-  justify-content: end;
-  transform: translateY(-15px);
-}
-
-.selo-marca p{
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 900;
-        transform: translatey(20px);
-        transform: rotate(30deg);
-        background-color: red;
-        padding: 2px;
-        border-radius: 6px;
-}
-
 .bxs-certification {
   font-size: 60px;
   display: flex;
   color: rgb(255, 166, 0);
-  text-shadow: 0px 0px 3px  black;
+  text-shadow: 0px 0px 3px black;
   position: absolute;
   z-index: -1;
 }
 
-
-.preco{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
+.preco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
-.preco p{
-        color: white;
-        padding: 10px;
-        background-image: linear-gradient(45deg, red , orange);
-        border: 1px white solid;
-        border-radius: 1px 1px 1px 10px;
-        font-size: 30px;
-        letter-spacing: 2px;
+.preco p {
+  color: white;
+  padding: 10px;
+  background-image: linear-gradient(45deg, red, orange);
+  border: 1px white solid;
+  border-radius: 1px 1px 1px 10px;
+  font-size: 30px;
+  letter-spacing: 2px;
 
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 900;
-        cursor: pointer;
-        transition-duration: 0.3s;
-
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
-
